@@ -72,7 +72,7 @@ public class FirstFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if (mListener != null) {
-                    mListener.onItemPressed("This is a content when Button 1 click");
+                    mListener.onItemPressed("Hello");
                 }
             }
         });
@@ -80,7 +80,7 @@ public class FirstFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if (mListener != null) {
-                    mListener.onItemPressed("This is a content when Button 1 click");
+                    mListener.onItemPressed("Hi, there");
                 }
             }
         });
