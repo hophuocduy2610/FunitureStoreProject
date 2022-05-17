@@ -1,4 +1,4 @@
-package com.example.funiturestore;
+package com.example.furniturestore;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -47,14 +47,14 @@ public class add_page extends AppCompatActivity {
                 String pri = price.getText().toString();
                 String img = imageLink.getText().toString();
                 productID = name;
-                com.example.funiturestore.Product product = new com.example.funiturestore.Product(name, manu, pri, img, productID);
+                Product product = new Product(name, manu, pri, img, productID);
 
                 databaseReference.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         databaseReference.child(productID).setValue(product);
                         Toast.makeText(add_page.this, "Đã thêm", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(add_page.this, com.example.funiturestore.product_page.class));
+                        startActivity(new Intent(add_page.this, product_page.class));
                     }
 
                     @Override

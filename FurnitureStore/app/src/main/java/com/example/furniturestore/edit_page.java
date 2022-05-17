@@ -1,4 +1,4 @@
-package com.example.funiturestore;
+package com.example.furniturestore;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -29,7 +29,7 @@ public class edit_page extends AppCompatActivity {
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
     private String productID;
-    private com.example.funiturestore.Product product;
+    private Product product;
 
 
     @Override
@@ -74,7 +74,7 @@ public class edit_page extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         databaseReference.updateChildren(map);
                         Toast.makeText(edit_page.this, "Đã cập nhật", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(edit_page.this, com.example.funiturestore.product_page.class));
+                        startActivity(new Intent(edit_page.this, product_page.class));
                     }
 
                     @Override
@@ -96,6 +96,6 @@ public class edit_page extends AppCompatActivity {
     private  void deleteProduct(){
         databaseReference.removeValue();
         Toast.makeText(this, "Xóa thành công", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(edit_page.this, com.example.funiturestore.product_page.class));
+        startActivity(new Intent(edit_page.this, product_page.class));
     }
 }

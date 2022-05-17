@@ -1,4 +1,4 @@
-package com.example.funiturestore;
+package com.example.furniturestore;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,7 +21,6 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -111,7 +109,7 @@ public class product_page extends AppCompatActivity implements productAdapter.Pr
         displayItem(productList.get(position));
     }
 
-    private void displayItem(com.example.funiturestore.Product product){
+    private void displayItem(Product product){
         final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
         View layout = LayoutInflater.from(this).inflate(R.layout.product_item, proItem);
         bottomSheetDialog.setContentView(layout);

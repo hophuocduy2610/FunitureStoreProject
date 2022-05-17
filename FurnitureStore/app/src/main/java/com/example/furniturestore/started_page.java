@@ -1,4 +1,4 @@
-package com.example.funiturestore;
+package com.example.furniturestore;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -32,7 +32,7 @@ public class started_page extends AppCompatActivity {
         btn_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(started_page.this, com.example.funiturestore.signUp_page.class));
+                startActivity(new Intent(started_page.this, signUp_page.class));
             }
         });
     }
@@ -42,7 +42,7 @@ public class started_page extends AppCompatActivity {
         super.onStart();
         FirebaseUser user = mAuth.getCurrentUser();
         if(user != null){
-            startActivity(new Intent(started_page.this, product_page.class));
+            startActivity(new Intent(started_page.this, com.example.furniturestore.product_page.class));
         }
     }
 }
