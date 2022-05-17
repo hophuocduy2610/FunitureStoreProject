@@ -1,4 +1,12 @@
-package com.example.baitaplon;
+package com.example.funiturestore;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -7,23 +15,12 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
-
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -33,7 +30,7 @@ public class product_page extends AppCompatActivity implements productAdapter.Pr
     private Button btn_add;
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
-    private ArrayList<Product> productList;
+    private ArrayList<com.example.baitaplon.Product> productList;
     private ConstraintLayout productPage;
     private ConstraintLayout proItem;
     private productAdapter productAdapt;
@@ -66,7 +63,7 @@ public class product_page extends AppCompatActivity implements productAdapter.Pr
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                productList.add(snapshot.getValue(Product.class));
+                productList.add(snapshot.getValue(com.example.baitaplon.Product.class));
                 productAdapt.notifyDataSetChanged();
             }
 
@@ -113,7 +110,7 @@ public class product_page extends AppCompatActivity implements productAdapter.Pr
         displayItem(productList.get(position));
     }
 
-    private void displayItem(Product product){
+    private void displayItem(com.example.baitaplon.Product product){
         final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
         View layout = LayoutInflater.from(this).inflate(R.layout.product_item, proItem);
         bottomSheetDialog.setContentView(layout);

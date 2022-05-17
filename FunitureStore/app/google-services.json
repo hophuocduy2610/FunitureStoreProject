@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "151632798406",
+    "firebase_url": "https://furniturestore-3885b-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "furniturestore-3885b",
+    "storage_bucket": "furniturestore-3885b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:151632798406:android:57ee48e91d89e7c93e6dc7",
+        "android_client_info": {
+          "package_name": "com.example.funiturestore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "151632798406-490qasp47q34n0fp5ldralq7fk5v084t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYKVnpRZ-GBkF77jClkzbdmKlE9wHqaKk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "151632798406-490qasp47q34n0fp5ldralq7fk5v084t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

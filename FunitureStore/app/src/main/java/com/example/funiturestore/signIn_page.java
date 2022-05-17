@@ -1,7 +1,4 @@
-package com.example.baitaplon;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.funiturestore;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -44,7 +44,7 @@ public class signIn_page extends AppCompatActivity {
         signupText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(signIn_page.this, signUp_page.class));
+                startActivity(new Intent(signIn_page.this, com.example.baitaplon.signUp_page.class));
             }
         });
     }
@@ -64,7 +64,7 @@ public class signIn_page extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()){
                         Toast.makeText(signIn_page.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(signIn_page.this, product_page.class));  /*Tới trang sản phẩm*/
+                        startActivity(new Intent(signIn_page.this, com.example.baitaplon.product_page.class));  /*Tới trang sản phẩm*/
                     }else {
                         Toast.makeText(signIn_page.this, "Đăng nhập không thành công", Toast.LENGTH_SHORT).show();
                     }
